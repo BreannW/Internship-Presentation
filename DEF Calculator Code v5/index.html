@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<META http-equiv="X-UA-Compatible" content="IE=9">
+<title>Untitled Document</title>
+<link rel ="stylesheet" type="text/css" href="DefCalcCssClean2.css"> 
+
+
+</head>
+
+
+<div class="DefCalc-wrapper">
+    <div id="title">
+    
+   <div id="titletext"> How Much DEF Do You Need?</div>
+    </div>
+
+    <form id="DEFCalc-Form">
+ 		
+                  <div id="DEFCalc-text_box" class="DEFCalc-result">
+      		  <p id="DEFCalc-ResultText">
+              		<span id="YWN">You will need: </span>
+  					<br> <span id="DEFNeeded"> 0 </span><br>
+                    <span id="GODEFA"> Gallons of DEF annually </span>
+                    <br> <br> 
+              		<span id="TankP"> </span> <br> <span id="tankSize"> </span> 
+               
+            
+              
+              
+               </span>
+            
+               
+               
+                </span>
+                <div id="OTRText"> </div> <br><br>
+            </p>
+   		  
+      </div>
+         
+        <div id="userinput">
+        
+           	<div id="whitebox1">
+                <label id="NOT">Number of Trucks Requiring DEF:</label> <br>
+                <input type="text" id= "NumberOfTrucks" value="8"><br>
+            </div>
+        
+            <div class="greybox">
+                <label id="AMPV">Annual Mileage per vehicle:</label>
+                <input type="text" id="MilesPerVeh" value="10000">
+<br>
+            </div>
+        
+        
+            <div class="whitebox">
+                <label id="AMPG">Average Miles per Gallon:</label><br>
+                <input type="text" id="AverageMPG" value="6"><br>
+            </div>
+        
+            <div class="greyboxlast"> 
+               
+                    <select id="DEFU">
+                        <option value="3"> 3 </option>
+                        <option value="4"> 4 </option>
+                        <option value="5"> 5 </option>
+                        </select>
+                     <label id="deflabel">% DEF used per Gallon <br></label> 
+                    </div>
+                    
+            <div class="whitebox">
+            <label> Truck Type </label> <br>
+            	<input type="radio" name="vehicleType" value="OTR" id="OTRradio"> Over The Road </input>  <br>
+                 <input type="radio" name="vehicleType" value="Local" id="Local"> Local Trucks  </input>  <br>
+                <input type="radio" name="vehicleType" value="Both" id="Both"> Both </input>
+                </div>
+        </div>
+       </form>
+           
+            <div id="submit">
+              	<input type="button" value="Submit" id="DEFsubmitbtn" class="DEFbtn">
+        	</div>
+            
+
+            
+            
+        <script src="DEFCalcjs.js"></script>
+    </div>
+    
+        
+
+
+
+</body>
+</html>

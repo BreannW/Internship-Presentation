@@ -1,0 +1,247 @@
+@charset "utf-8";
+
+
+.DefCalc-wrapper {
+	width:566px;
+        border:solid #00549b; 
+	border-radius:28.8px;
+	background-color:#00549b;
+	height:auto;
+	        margin-top: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        
+}
+
+
+#title {
+	
+	height:66px;
+	background-color: white;
+	
+	font-size:24px;
+	color:#00549b;
+	font-weight:bold;
+	border: solid #00549b;
+	border-top-right-radius:28.8px;
+	border-top-left-radius:28.8px;
+
+	text-align:center;
+}
+
+#titletext {
+	margin-top:18px;
+}
+
+ 
+#userinput {
+	width:54%; 
+	position:relative;
+	
+
+}
+
+
+ 
+ #whitebox1 {
+	
+border-top-color:#00549b;
+border-top: solid 3px;
+	 
+ }
+	 
+.whitebox, #whitebox1, .greybox, .submit {
+	min-height:65px;
+	margin:auto;
+	border-bottom-color:#00549b;
+	border-bottom-style:solid;
+	border-bottom-width:5px; 
+	width:100%;
+
+	font-weight: bolder;
+	color:#00549b;
+	
+	border-left:solid;
+	padding-top:11px;
+	
+	}
+	
+.greyboxlast {
+	height:43px;
+	padding-top:15px;
+	
+	border-bottom-color:#00549b;
+	border-bottom-style:solid;
+	border-bottom-width:5px; 
+	width:100%;
+	
+	font-weight:bold;
+	color:#00549b;
+	
+	border-left:solid;
+}
+
+
+.whitebox:last-child {
+
+	padding-bottom:15px;
+}
+	
+label:not(#deflabel)
+ { 
+ 	padding-left: 24px;
+	}
+	
+input[type=text]
+	{
+	margin-left:24px;
+	width:252px;
+	height:30px;
+	font-size:20px;
+	
+	border: solid black thin;
+	}
+	
+input[type=radio]
+{
+margin-left:24px;
+	}
+	
+
+
+.greybox, .greyboxlast {
+	background-color: #CDCDCD;
+
+}
+
+.whitebox, #whitebox1 {
+	background-color: white;
+	font-size: 12px;
+}
+
+
+
+.DEFCalc-result {
+
+	width: 46%;
+	float: right;
+
+	position: relative;
+	height: 319px;
+        
+}
+
+#DEFCalc-ResultText { 
+	margin-top: 8px;
+	margin-left: 15px; 
+	margin-right: 15px;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: bold;
+      }
+
+#DEFCalc-text_box p { 
+	line-height: 2.5em;
+        text-align: center;
+      }
+
+
+#YWN {
+	font-size:25px;
+}
+
+#GODEFA {
+	font-size:18px;
+}
+
+ #DEFCalc-ResultText span
+	{
+	position:relative;
+	color:white;
+	}
+
+#DEFNeeded {
+	
+	color:white;
+	font-size:36px;
+	font-weight:900;
+	
+	
+	
+}
+
+#TankP:not(#tankSize) {
+	font-size:18px;
+	line-height:normal;
+}
+
+
+
+
+label {
+	font-size:16px;
+
+
+	}
+
+
+ #DEFU {
+	
+	margin-left:24px;
+	margin-right:0px;
+	margin-top:auto;
+	margin-bottom:auto;
+	
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	
+	color:#00549b;
+	font-size:18px;
+	
+	border:none;
+}
+
+
+
+#DEFsubmitbtn, input[type='DEFsubmit'] {
+	background: white;
+	width:100%;
+	height:52px;
+	font-weight:bold;
+	font-size:36px;
+	font-smooth:always;
+	color:#00549b;
+	
+	border: solid #00549b;
+	border-top:none;
+	border-bottom-right-radius:28px;
+	border-bottom-left-radius:28.8px;}
+	
+#DEFsubmitbtn:hover {
+	background-color: transparent;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:36px;
+	color:white;
+	font-weight:bold;
+	border: solid #00549b;
+
+	
+}
+
+
+
+select {
+	background-color: #CDCDCD; 
+}
+
+.DEFCalcLink, .DEFCalcLink:visited {
+	color: #f58220;
+}
+
+
+#OTRText { 
+font-weight:bold;
+font-size:15px;
+color:white;
+padding:15px;
+text-align: center;
+
+}

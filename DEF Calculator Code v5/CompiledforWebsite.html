@@ -1,0 +1,505 @@
+<!doctype html>
+<style> 
+@charset "utf-8";
+
+
+.DefCalc-wrapper {
+	width:566px;
+        border:solid #00549b; 
+	border-radius:28.8px;
+	background-color:#00549b;
+	height:auto;
+	
+        margin-top: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        
+}
+
+
+#title {
+	
+	height:66px;
+	background-color: white;
+	
+	font-size:24px;
+	color:#00549b;
+	font-weight:bold;
+	border: solid #00549b;
+	border-top-right-radius:28.8px;
+	border-top-left-radius:28.8px;
+
+	text-align:center;
+}
+
+#titletext {
+	margin-top:18px;
+}
+
+ 
+#userinput {
+	width:54%; 
+	position:relative;
+	
+
+}
+
+
+ 
+ #whitebox1 {
+	
+border-top-color:#00549b;
+border-top: solid 3px;
+	 
+ }
+	 
+.whitebox, #whitebox1, .greybox, .submit {
+	min-height:65px;
+	margin:auto;
+	border-bottom-color:#00549b;
+	border-bottom-style:solid;
+	border-bottom-width:5px; 
+	width:100%;
+
+	font-weight: bolder;
+	color:#00549b;
+	
+	border-left:solid;
+	padding-top:11px;
+	
+	}
+	
+.greyboxlast {
+	height:43px;
+	padding-top:15px;
+	
+	border-bottom-color:#00549b;
+	border-bottom-style:solid;
+	border-bottom-width:5px; 
+	width:100%;
+	
+	font-weight:bold;
+	color:#00549b;
+	
+	border-left:solid;
+}
+
+
+.whitebox:last-child {
+
+	padding-bottom:15px;
+}
+	
+label:not(#deflabel)
+ { 
+ 	padding-left: 24px;
+	}
+	
+input[type=text]
+	{
+	margin-left:24px;
+	width:252px;
+	height:30px;
+	font-size:20px;
+	
+	border: solid black thin;
+	}
+	
+input[type=radio]
+{
+margin-left:24px;
+	}
+	
+
+
+.greybox, .greyboxlast {
+	background-color: #CDCDCD;
+
+}
+
+.whitebox, #whitebox1 {
+	background-color: white;
+	font-size: 12px;
+}
+
+
+
+.DEFCalc-result {
+
+	width: 46%;
+	float: right;
+
+	position: relative;
+	height: 319px;
+        
+}
+
+#DEFCalc-ResultText { 
+	margin-top: 8px;
+	margin-left: 15px; 
+	margin-right: 15px;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: bold;
+      }
+
+#DEFCalc-text_box p { 
+	line-height: 2.5em;
+        text-align: center;
+      }
+
+
+#YWN {
+	font-size:25px;
+}
+
+#GODEFA {
+	font-size:18px;
+}
+
+ #DEFCalc-ResultText span
+	{
+	position:relative;
+	color:white;
+	}
+
+#DEFNeeded {
+	
+	color:white;
+	font-size:36px;
+	font-weight:900;
+	
+	
+	
+}
+
+#TankP:not(#tankSize) {
+	font-size:18px;
+	line-height:normal;
+}
+
+
+
+
+label {
+	font-size:16px;
+
+
+	}
+
+
+ #DEFU {
+	
+	margin-left:24px;
+	margin-right:0px;
+	margin-top:auto;
+	margin-bottom:auto;
+	
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	
+	color:#00549b;
+	font-size:18px;
+	
+	border:none;
+}
+
+
+
+#DEFsubmitbtn, button, input[type='DEFsubmit'] {
+	background: white;
+	width:100%;
+	height:52px;
+	
+	font-size:36px;
+	font-smooth:always;
+	color:#00549b;
+	
+	border: solid #00549b;
+	border-top:none;
+	border-bottom-right-radius:28px;
+	border-bottom-left-radius:28.8px;}
+	
+#DEFsubmitbtn:hover {
+	background-color: transparent;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:36px;
+	color:white;
+	font-weight:bold;
+	border: solid #00549b;
+
+	
+}
+
+
+
+select {
+	background-color: #CDCDCD; 
+}
+
+.DEFCalcLink, .DEFCalcLink:visited {
+	color: #f58220;
+}
+
+
+#OTRText { 
+font-weight:bold;
+font-size:15px;
+
+font-size:15px;
+color:white;
+padding:15px;
+text-align: center;
+
+}
+
+</style>
+<div class="DefCalc-wrapper">
+    <div id="title">
+    
+   <div id="titletext"> How Much DEF Do You Need?</div>
+    </div>
+
+    <form id="DEFCalc-Form">
+ 		
+                  <div id="DEFCalc-text_box" class="DEFCalc-result">
+      		  <p id="DEFCalc-ResultText">
+              		<span id="YWN">You will need: </span>
+  					<br> <span id="DEFNeeded"> 0 </span><br>
+                    <span id="GODEFA"> Gallons of DEF annually </span>
+                    <br> <br> 
+              		<span id="TankP"> </span> <br> <span id="tankSize"> </span> 
+               
+            
+              
+              
+               </span>
+            
+               
+               
+                </span>
+                <div id="OTRText"> </div> <br><br>
+            </p>
+   		  
+      </div>
+         
+        <div id="userinput">
+        
+           	<div id="whitebox1">
+                <label id="NOT">Number of Trucks Requiring DEF:</label> <br>
+                <input type="text" id= "NumberOfTrucks" value="8"><br>
+            </div>
+        
+            <div class="greybox">
+                <label id="AMPV">Annual Mileage per vehicle:</label>
+                <input type="text" id="MilesPerVeh" value="10000">
+<br>
+            </div>
+        
+        
+            <div class="whitebox">
+                <label id="AMPG">Average Miles per Gallon:</label><br>
+                <input type="text" id="AverageMPG" value="6"><br>
+            </div>
+        
+            <div class="greyboxlast"> 
+               
+                    <select id="DEFU">
+                        <option value="3"> 3 </option>
+                        <option value="4"> 4 </option>
+                        <option value="5"> 5 </option>
+                        </select>
+                     <label id="deflabel">% DEF used per Gallon <br></label> 
+                    </div>
+                    
+            <div class="whitebox">
+            <label> Truck Type </label> <br>
+            	<input type="radio" name="vehicleType" value="OTR" id="OTRradio"> Over The Road </input>  <br>
+                 <input type="radio" name="vehicleType" value="Local" id="Local"> Local Trucks  </input>  <br>
+                <input type="radio" name="vehicleType" value="Both" id="Both"> Both </input>
+                </div>
+        </div>
+       </form>
+           
+            <div id="submit">
+              	<input type="button" value="Submit" id="DEFsubmitbtn" class="DEFbtn">
+        	</div>
+            
+            
+        <script type="text/javascript">document.getElementById('DEFsubmitbtn').addEventListener("click", CalcDef);
+
+	function CalcDef(event) {
+	        event.preventDefault();
+	       /* if (document.getElementById('NumberOfTrucks').value === '') {
+	            document.getElementById("NOT").innerHTML =
+	                'Number of Trucks Requiring DEF:  <span style="color:red">*</span>';
+	            document.getElementById('NumberOfTrucks').focus();
+				
+	        } 
+			
+			
+			if  (document.getElementById('MilesPerVeh').value === '') {
+	            document.getElementById('AMPV').innerHTML =
+	                'Annual Mileage per Vehicle<span style="color:red">*</span>';
+	            document.getElementById('MilesPerVeh').focus();
+				
+	        }
+			
+	        if (document.getElementById('AverageMPG').value === '') {
+	            document.getElementById("AMPG").innerHTML =
+	                'Average Miles per Gallon <span style="color:red">*</span>';
+	            document.getElementById('AverageMPG').focus();
+	        } 
+			*/
+			
+			
+	            var NumberOfTrucks = document.getElementById('NumberOfTrucks').value;
+	            if (NumberOfTrucks.match(/[a-z]/i)) {
+	                document.getElementById("NOT").innerHTML =
+	                    'Number of Trucks Requiring DEF: <br> <label style="color:red; font-weight:100;">Please only use numbers</label>';
+	            } else {
+				if (document.getElementById('NumberOfTrucks').value === '') {
+	            document.getElementById("NOT").innerHTML =
+	                'Number of Trucks Requiring DEF:  <span style="color:red">*</span>';
+	            document.getElementById('NumberOfTrucks').focus();
+				
+	        } 
+	          else
+{			  document.getElementById("NOT").innerHTML = 'Number of Trucks Requiring DEF:';
+}
+	            }
+				
+				
+				
+				
+	            //remove commas and convert string to number
+	            NumberOfTrucks = NumberOfTrucks.replace(/\,/g, '');
+	            NumberOfTrucks = parseInt(NumberOfTrucks, 10);
+	            var MilesPerVeh = document.getElementById('MilesPerVeh').value;
+	            if (MilesPerVeh.match(/[a-z]/i)) {
+	                document.getElementById("AMPV").innerHTML =
+	                    'Annual Mileage per vehicle: <br> <label style="color:red; font-weight:100;">Please only use numbers</label>';
+	            } else {
+				if  (document.getElementById('MilesPerVeh').value === '') {
+	            document.getElementById('AMPV').innerHTML =
+	                'Annual Mileage per Vehicle<span style="color:red">*</span>';
+	            document.getElementById('MilesPerVeh').focus();
+				
+	        }
+			else
+			{
+	                document.getElementById("AMPV").innerHTML =
+	                    'Annual Mileage per vehicle:';
+						}
+	            }
+	            //remove commas and convert string to number
+	            MilesPerVeh = MilesPerVeh.replace(/\,/g, '');
+	            MilesPerVeh = parseInt(MilesPerVeh, 10);
+	            var AverageMPG = document.getElementById('AverageMPG').value;
+	            if (AverageMPG.match(/[a-z]/i)) {
+	                document.getElementById("AMPG").innerHTML =
+	                    'Average Miles per Gallon: <br> <label style="color:red; font-weight:100;">Please only use numbers</label>';
+	            } else {
+				   if (document.getElementById('AverageMPG').value === '') {
+	            document.getElementById("AMPG").innerHTML =
+	                'Average Miles per Gallon <span style="color:red">*</span>';
+	            document.getElementById('AverageMPG').focus();
+	        } 
+			else{
+	                document.getElementById("AMPG").innerHTML =
+	                    'Average Miles per Gallon:';
+						}
+	            }
+	            //remove commas and convert string to number
+	            AverageMPG = AverageMPG.replace(/\,/g, '');
+	            AverageMPG = parseInt(AverageMPG, 10);
+	            var AllMiles = (NumberOfTrucks * MilesPerVeh);
+	            var divGals = (AllMiles / AverageMPG);
+	            var DEFNum = +document.getElementById('DEFU').value;
+	            // make the percentage point a decimal 
+	            var DEFUsage = (DEFNum / 100);
+	            var DEFUsedAnnually = (divGals * DEFUsage)
+	                //round our result up
+	            var DEFUsedAnnually = Math.ceil(DEFUsedAnnually);
+	            //add a comma so it displays in the calculator 
+	            DEFUsedAnnually = DEFUsedAnnually.toString().replace(
+	                /\B(?=(\d{3})+(?!\d))/g, ",");
+	            document.getElementById('DEFNeeded').innerHTML = DEFUsedAnnually;
+	            //remove the comma from the var to do threshold calculations 
+	            DEFUsedAnnually = DEFUsedAnnually.replace(/\,/g, '');
+	            DEFUsedAnnually = parseInt(DEFUsedAnnually, 10);
+	           
+			    if (DEFUsedAnnually >= 0 && DEFUsedAnnually <= 600) {
+	                document.getElementById("TankP").innerHTML =
+	                    "We recommend</br>2.5 Gallon jugs";
+	                // if result is greater than or equal to 601 and less than or equal to 1319
+	            } else if (DEFUsedAnnually >= 601 && DEFUsedAnnually <= 1319) {
+	                document.getElementById("TankP").innerHTML =
+	                    "We recommend a</br>55 Gallon Drum";
+	                // if result is greater than or equal to 1320 and less than or equal to 9,900
+	            } else if (DEFUsedAnnually >= 1320 && DEFUsedAnnually <= 9900) {
+	                document.getElementById("TankP").innerHTML =
+	                    "We reccommend</br>330 Gallon Totes";
+	                // if result is greater than or equal to 9,901 and less than or equal to 40,000
+	            } else if (DEFUsedAnnually >= 9901 && DEFUsedAnnually <= 40000) {
+	                document.getElementById("TankP").innerHTML =
+	                    "We recommend a</br>1,000 to 2,000 Gallon Mini Bulk Tank";
+	                // if result is greater than or equal to 40,001 and less than or equal to 80,000
+	            } else if (DEFUsedAnnually >= 40001 && DEFUsedAnnually <= 80000) {
+	                document.getElementById("TankP").innerHTML =
+	                    "We reccommend a</br>3,000 to 4,000 Gallon Mini Bulk Tank";
+	                // if result is greater than or equal to 80001 and less than or equal to 150,000
+	            } else if (DEFUsedAnnually >= 80001 && DEFUsedAnnually <= 150000) {
+	                document.getElementById("TankP").innerHTML =
+	                    "We reccommend a</br>5,000 Gallon Bulk Tank";
+	                // if its over 150,001 
+	            } else {
+	                document.getElementById("TankP").innerHTML =
+	                    'We recommend you contact one of our </br><a style="color: #f58220;"  class="DEFCalcLink" href="mailto:DEFSolutions@atlasoil.com">DEF Specialists</a></br>for proper sizing.';
+	            }
+	        
+	        if (document.getElementById('OTRradio').checked) {
+	            document.getElementById("OTRText").innerHTML =
+	                '<br>Send your OTR drivers with a bottle of DEF! <a style="color: #f58220;" class="DEFCalcLink" href="mailto:DEFSolutions@atlasoil.com">Ask about our pre-packaged DEF goods today!</a>';
+	        } else if (document.getElementById('Local').checked) {
+	            document.getElementById("OTRText").innerHTML = " ";
+	        } else if (document.getElementById('Both').checked) {
+	            document.getElementById('OTRText').innerHTML =
+	                '<br>Send your OTR drivers with a bottle of DEF! <a style="color: #f58220;" class="DEFCalcLink" href="mailto:DEFSolutions@atlasoil.com">Ask about our pre-packaged DEF goods today!</a>';
+	        }
+	    }
+	    /* function SizedTank() {
+if (DEFUsedAnnually >=0 && DEFUsedAnnually <= 2560) { document.getElementById("tankSize").innerHTML = "55 Gal Drum";
+	} else if (DEFUsedAnnually >= 2561 && DEFUsedAnnually <= 6400) { document.getElementById("tankSize").innerHTML = "257 Gallon Tote";
+	} else if (DEFUsedAnnually >= 6401 && DEFUsedAnnually <= 19200) { document.getElementById("tankSize").innerHTML = "1-2k Gallon Mini";
+	} else if (DEFUsedAnnually >= 19201 && DEFUsedAnnually <= 38400) { document.getElementById("tankSize").innerHTML = "3-4k Gallon Mini";
+	} else if (DEFUsedAnnually >=38401 && DEFUsedAnnually <=76800){ document.getElementById("tankSize").innerHTML = "5K UST";
+	} else { document.getElementById("tank").innerHTML = "Please Contact a Sales Representative"; } 
+	
+		
+		
+}*/
+	    /* IE11 Fix for SP2010 */
+	if (typeof(UserAgentInfo) != 'undefined' && !window.addEventListener) {
+	    UserAgentInfo.strBrowser = 1;
+	}
+	/* if (typeof console == "undefined") {
+    this.console = { log: function (msg) { alert(msg); } };
+} */
+	 // IE9 fix
+	if (!window.console) {
+	    var console = {
+	        log: function() {},
+	        warn: function() {},
+	        error: function() {},
+	        time: function() {},
+	        timeEnd: function() {}
+	    }
+	}
+	
+	 </script>
+    </div>
+    
+        
+
+
+
+</html>
